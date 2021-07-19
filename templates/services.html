@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% block title %}Services |{% endblock title %}
+{% load static %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colrolib Templates">
+    <meta name="author" content="Colrolib">
+    <meta name="keywords" content="Colrolib Templates">
+
+    <!-- Title Page-->
+    <title>Services</title>
+
+    <!-- Icons font CSS-->
+    <link href="{% static 'vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" media="all">
+</head>
+<body>
+    <div class="page-wrapper bg-img-1 p-t-200 p-b-120">
+        <div class="wrapper wrapper--w900">
+        {% for message in messages %}
+            <div class="alert alert-success">
+                <a class="close" href="#" data-dismiss="alert"></a>
+                {{ message }}
+            </div>
+        {% endfor %}
+            <div class="card card-4">
+                <div class="card-body">
+                    <ul class="tab-list">
+                        <li class="tab-list__item active">
+                            <a class="tab-list__link" href="#search" data-toggle="tab">Search</a>
+                        </li>
+                        <li class="tab-list__item">
+                            <a class="tab-list__link" href="#compare" data-toggle="tab">Compare</a>
+                        </li>
+                        <li class="tab-list__item">
+                            <a class="tab-list__link" href="#geolocation" data-toggle="tab">GeoLocation</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="search">
+                            <form method="POST" action="search">
+                            {% csrf_token %}
+                                <div class="input-group input-group-big">
+                                    <label class="label">Search:</label>
+                                    <input class="input--style-1" type="text" name="searched" placeholder="Keyword To Analysis" required="required">
+                                    <i class="zmdi zmdi-search input-group-symbol"></i>
+                                </div>
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">Start Date:</label>
+                                            <input class="input--style-1" type="text" name="start_date" placeholder="MM-DD-YYYY" id="input-start" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">End Date:</label>
+                                            <input class="input--style-1" type="text" name="end_date" placeholder="MM-DD-YYYY" id="input-end" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-space">
+                                        <button class="btn-submit" type="submit">search</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="compare">
+                            <form method="POST" action="compare">
+                            {% csrf_token %}
+                                <div class="input-group input-group-big">
+                                    <label class="label">Compare 1:</label>
+                                    <input class="input--style-1" type="text" name="searched1" placeholder="Keyword To Compare" required="required">
+                                    <i class="zmdi zmdi-search input-group-symbol"></i>
+                                </div>
+                                <div class="input-group input-group-big">
+                                    <label class="label">Compare 2:</label>
+                                    <input class="input--style-1" type="text" name="searched2" placeholder="Keyword To Compare" required="required">
+                                    <i class="zmdi zmdi-search input-group-symbol"></i>
+                                </div>
+
+
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">Start Date:</label>
+                                            <input class="input--style-1 js-single-datepicker" type="text" name="start_date" placeholder="mm/dd/yyyy" data-drop="1" required="required">
+                                            <div class="dropdown-datepicker" id="dropdown-datepicker1"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">End Date:</label>
+                                            <input class="input--style-1 js-single-datepicker" type="text" name="end_date" placeholder="mm/dd/yyyy" data-drop="2" required="required">
+                                            <div class="dropdown-datepicker" id="dropdown-datepicker2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-submit m-t-0" type="submit">search</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="geolocation">
+                        <div class="alert alert-success">
+                <a class="close" href="#" data-dismiss="alert">Under Development</a>
+            </div>
+                            <form method="POST" name="form">
+                            {% csrf_token %}
+                                <div class="input-group input-group-big">
+                                    <label class="label">Search:</label>
+                                    <input class="input--style-1" type="text" name="searched" placeholder="Location & Keyword To Analysis" required="required" >
+                                    <i class="zmdi zmdi-search input-group-symbol"></i>
+                                </div>
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">Start Date:</label>
+                                            <input class="input--style-1" type="text" name="start_date" placeholder="MM/DD/YYYY" id="input-start-2" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">End Date:</label>
+                                            <input class="input--style-1" type="text" name="end_date" placeholder="MM/DD/YYYY" id="input-end-2" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+                                            <style>
+                                                * {
+                                                    margin: 0;
+                                                    padding: 0;
+                                                }
+
+                                                /* Set the size of the div element that contains the map */
+                                                #map {
+                                                    /* The height is 400 pixels */
+                                                    height: 400px;
+                                                    /* The width is the width of the web page */
+                                                    width: 100%;
+                                                }
+                                            </style>
+                                            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+                                            <script>
+                                                // Initialize and add the map
+                                                var lat, lng;
+                                                function initMap() {
+                                                    const map = new google.maps.Map(document.getElementById("map"), {
+                                                        center: new google.maps.LatLng(28.7041, 77.1025),
+                                                        zoom: 6,
+                                                    });
+                                                    map.addListener("click", (e) => {
+                                                        placeMarkerAndPanTo(e.latLng, map);
+                                                        lat = e.latLng.lat();
+                                                        lng = e.latLng.lng();
+                                                    });
+                                                }
+                                                function addingItems() {
+                                                    
+                                                    var xhttp = new XMLHttpRequest();
+
+                                                    const items_url = "{% url 'map' %}"
+
+                                                    xhttp.open("POST", items_url, true);
+
+                                                    var form = new FormData()
+                                                    form.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+                                                    form.append("km", document.getElementsByName("km")[0].value)
+                                                    form.append("start_date", document.getElementsByName("start_date")[0].value)
+                                                    form.append("searched", document.getElementsByName("searched")[0].value)
+                                                    form.append("end_date", document.getElementsByName("end_date")[0].value)
+                                                    form.append("lat", lat)
+                                                    form.append("lng", lng)
+                                                    xhttp.send(form);
+                                                }  
+
+                                                xhttp.onreadystatechange = function() {
+                                                        if (this.readyState == 4 && this.status == 200) {
+                                                            window.location.href = items_url;
+                                                        }
+                                                    };
+
+                                                function placeMarkerAndPanTo(latLng, map) {
+                                                    new google.maps.Marker({
+                                                        position: latLng,
+                                                        map: map,
+                                                    });
+                                                    map.panTo(latLng);
+                                                }
+                                            </script>
+
+                                            <div id="map"></div>
+                                            <script async defer
+                                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARcHqIIDjQRT_skc_3-1QRQFNDUhp9uW8&callback=initMap&libraries=&v=weekly">
+                                                </script>
+                                <button class="btn-submit m-t-35" type="submit" onclick="addingItems();">search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <!-- Vendor JS-->
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap-wizard/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap-wizard/jquery.bootstrap.wizard.min.js' %}"></script>
+    <script src="{% static 'vendor/datepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/datepicker/daterangepicker.js' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'js/global.js' %}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
+
+{% endblock body %}

@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+{% block title %} Compare |{% endblock title %}
+
+{% block body %}
+<body style="background-color:black;text-align:center">
+<p>|</p>
+  <h3>|</h3>
+    <center>
+          <h1 style="color:white;"> You Compared {{searched1}} Vs {{searched2}}</h1>
+          <p>To give you a glimpse of the technical terms:-</p>
+          <p style="font-size:0.9vw">Subjectivity is an integer in the range of [0,1]. It refers to personal opinion, emotion, or judgment. The increased subjectivity means that the words are more of an individual's view and less of factual data.</p>
+          <p style="font-size:0.9vw">Polarity is an integer in the range of [-1,1], where 1 means a positive statement and -1 means a negative statement.It determines whether the text expresses the user's positive, negative or neutral feelings regarding an entity.</p>
+          <img src="{{graph1|safe}} ">
+          <img src="{{graph2|safe}} ">
+          <p></p>
+          <img src="{{graph3|safe}} ">
+          <img src="{{graph4|safe}} ">
+    </center>
+{% endblock body %}

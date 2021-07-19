@@ -1,0 +1,348 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}
+
+{% block body %}
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>Welcome to SentilyZer</h1>
+      <h2>Want to know what's trending more and what's not among the people around you? Well, how about people's choices in faraway geographic locations?</h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-6 col-lg-7" data-aos="fade-right">
+            <img src="{% static 'img/IITKCC.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0">
+            <h2 data-aos="fade-up">We are a team of Technology Enthusiasts from <b>IIT Kanpur</b></h2>
+            <p data-aos="fade-up">
+              We have developed <b>SentilyZer</b> to help you know your peer's opinion on any topic that you want.
+            </p>
+            <div class="icon-box" data-aos="fade-up">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Tweets</h4>
+              <p>It examines the enormous amount of data(relevant to your topic and the restrictions you impose) accessible via Twitter.</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Sentiment Analysis</h4>
+              <p>After reasonable preprocessing of the data, it subjects the data to Sentiment Analysis, with the help of machine learning.</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Subjectivity and Polarity</h4>
+              <p>All in all, we draw up data that show how people's commentary changed in their subjectivity and polarity. Try out to find a lot more.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Steps Section ======= -->
+    <!-- End Steps Section -->
+
+    <!-- ======= Features Section ======= -->
+    <!-- End Features Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p><strong>These are the three services currently offered by SentilyZer to its users.</strong></p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class='bx bx-search-alt'></i></div>
+              <h4 class="title"><a href="/search">Search</a></h4>
+              <p class="text-justify">To use this feature, enter the topic you wish to search and an interval (defined by a start date and an end date). Then hit Enter.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+              <h4 class="title"><a href="/compare">Compare</a></h4>
+              <p class="text-justify">For this, provide the two topics you wish to compare and an interval (defined by a start date and an end date). For instance, comparing opinions of people on Covaxin versus Covishield between the period 1/5/21 till 1/6/21</p>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="/map">Search by GeoLocation</a></h4>
+              <p class="description">Enter the search topic, a defined interval, and click on a location on the google-map to get the results for that geolocation. Hit Enter to know the analysis.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <!-- End testimonial item -->
+
+      <!-- End testimonial item -->
+
+           <!-- End Testimonials Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <p><b>SentilyZer</b> was developed under the esteem guidance of <a href="https://www.iitk.ac.in/new/veena-bansal"> <srong>Prof. Veena Bansal</srong></a> (Associate Professor, Department of Industrial & Management Engineering, IIT Kanpur).</p>
+        </div>
+
+        
+        <div class="row justify-content-center">
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="{% static 'img/team/Veena-Bansal.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Prof. Veena Bansal</h4>
+                  <!-- <span>Team Member 1</span> -->
+                </div>
+                <div class="social">
+                  <a href="mailto:veena@iitk.ac.in"><i class="bi bi-envelope"></i></a>
+                  <a href="https://www.linkedin.com/in/veena-bansal-singhal-5ba6834/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="{% static 'img/team/Shivamkv.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Shivam Kumar Vishwakarma</h4>
+                  <!-- <span>Team Member 2</span> -->
+                </div>
+                <div class="social">
+                  <a href="mailto:shivamkv@iitk.ac.in"><i class="bi bi-envelope"></i></a>
+                  <a href="https://www.facebook.com/shivam.kv.31"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/shivam_kv009/"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/shivamkv001/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="{% static 'img/team/shobhit.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Shobhit Bamoria</h4>
+                  <!-- <span>CTO</span> -->
+                </div>
+                <div class="social">
+                  <a href="mailto:sbamoria@iitk.ac.in"><i class="bi bi-envelope"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/shobhit-bamoria-946691190/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row justify-content-center">
+          <div class=" align-items-center col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="{% static 'img/team/srajal.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Srajal Agrawal</h4>
+                  <!-- <span>Accountant</span> -->
+                </div>
+                <div class="social">
+                  <a href="mailto:srajal@iitk.ac.in"><i class="bi bi-envelope"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/agrawal_srajal/"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/srajal-agrawal-342a2119a/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 " data-aos="fade-up">
+            <div class="member">
+              <img src="{% static 'img/team/iqra.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Iqra Zareef</h4>
+                  <!-- <span>Team Member 1</span> -->
+                </div>
+                <div class="social">
+                  <a href="mailto:izareef@iitk.ac.in"><i class="bi bi-envelope"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/iqra-zareef-79129a18a"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 " data-aos="fade-up">
+            <div class="member">
+              <img src="{% static 'img/team/kuldeep.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Kuldeep Kumar</h4>
+                  <!-- <span>Team Member 1</span> -->
+                </div>
+                <div class="social">
+                  <a href="mailto:kuldpkr@iitk.ac.in"><i class="bi bi-envelope"></i></a>
+                  <a href="https://www.facebook.com/kuldpkr7/"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/kuldpkr/"><i class="bi bi-instagram"></i></a>
+                  <a href="www.linkedin.com/in/kuldpkr"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= F.A.Q Section ======= -->
+    <!-- End F.A.Q Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Feedback</h2>
+          <p>Now that you have got to know about your peer's views and analytics of your search topic, we would love to get a glimpse of your valuable opinion about our work. Do fill out the feedback to help us improve for better.</p>
+        </div>
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-10">
+            <form action="/#contact" method="post" role="form" class="php-email-form">
+            {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              {% for message in messages %}
+            <div class="alert alert-success">
+                <a class="close" href="#" data-dismiss="alert"></a>
+                {{ message }}
+            </div>
+        {% endfor %}
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h1>SentilyZer</h1>
+              <p>
+                Indian Institute Of Technology <br>
+                Kanpur 208016, INDIA<br><br>
+
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/#team">Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/search">Search</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/compare">Compare</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/map">GeoLocation</a></li>
+            </ul>
+          </div>
+          
+          
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sentilyzer</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/ -->
+        Designed with <a href="/">Cheers :)</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a
+
+
+
+
+{% endblock body %}
