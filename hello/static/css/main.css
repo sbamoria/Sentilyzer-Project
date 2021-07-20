@@ -513,7 +513,7 @@ textarea {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  width: 100%;
+  width: 62%;
   font-size: 18px;
   font-family: inherit;
 }
@@ -552,7 +552,7 @@ button {
 }
 
 .input-group-big {
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   padding-right: 60px;
 }
 
@@ -607,7 +607,7 @@ button {
 
 .input--style-1 {
   font-size: 18px;
-  padding: 19px 0;
+  padding: 15px 0;
   color: #666;
   font-family: inherit;
 }
