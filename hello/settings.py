@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-197(58ln_n1c7i$@9e!ns((3&f$@9*pns6rhb#4!s2j1dwjh%2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','sentilyzer-project.herokuapp.com']
 
 
 # Application definition
