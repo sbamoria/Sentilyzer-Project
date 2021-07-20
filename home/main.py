@@ -74,7 +74,7 @@ def extract(start_date,end_date, search):
             list_of_dfs.append(df)
 
         start_date= start_date_2
-
+    
     tweet = pd.concat(list_of_dfs,ignore_index = True)
     tweet['sentiment_results'] = tweet['clean_tweets'].apply(get_sentiment)
     tweet = tweet.join(pd.json_normalize(tweet['sentiment_results']))
@@ -211,8 +211,8 @@ def get_plot_comp(tweet1,tweet2,search1,search2,sentiment1,t1,sentiment2,t2):
     fig3.update_layout(title_text='Polarity vs Date',xaxis_title_text='Date',yaxis_title_text='Polarity',template="plotly_dark")
 
     fig4 = go.Figure()
-    fig4.add_trace(go.Scatter(x=t1.date, y=t1.subjectivity,mode='lines+markers', name='Covaxin'))
-    fig4.add_trace(go.Scatter(x=t2.date, y=t2.subjectivity,mode='lines+markers', name='Covishield'))
+    fig4.add_trace(go.Scatter(x=t1.date, y=t1.subjectivity,mode='lines+markers', name=search1))
+    fig4.add_trace(go.Scatter(x=t2.date, y=t2.subjectivity,mode='lines+markers', name=search2))
     fig4.update_yaxes(range=[0,1])
     fig4.update_layout(title_text='Subjectivity vs Date',xaxis_title_text='Date',yaxis_title_text='Subjectivity',template="plotly_dark")
 
