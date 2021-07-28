@@ -30,8 +30,6 @@ Open terminal and run command `pip install django` or
 
 Now to install the Twint, web scraping tool for Twitter, run the command
 
-![](Aspose.Words.83d7c7ae-9f22-4dc1-8287-39b8df4b74c1.001.png)
-
 `pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint`
 
 To know more about twint: <https://github.com/twintproject/twint>
@@ -69,6 +67,7 @@ For windows run,
 
 `pip install kaleido`
 
+`pip install whitenoise`
 ---------------------------------------
 ## MySQL
 
@@ -84,7 +83,7 @@ Navigate to the hello folder -> settings.py
 
 Inside the settings.py you would find this,
 
-![](Aspose.Words.83d7c7ae-9f22-4dc1-8287-39b8df4b74c1.003.png)
+![](1.png)
 
 Change this password to the password that you set as the root password while installing MySQL and save the file.
 
@@ -96,7 +95,7 @@ Enter the root password
 
 Now to Create a database named sentilyzer run the command,
 
-`CREATE DATABASE sentilyzer;`
+`CREATE DATABASE Sentiment;`
 
 To check if the database was created or not,
 
