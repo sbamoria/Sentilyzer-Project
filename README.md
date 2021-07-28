@@ -68,6 +68,7 @@ For windows run,
 `pip install kaleido`
 
 `pip install whitenoise`
+
 ---------------------------------------
 ## MySQL
 
