@@ -10,8 +10,7 @@ You can follow the tutorial
 
 [How to Install Python 3.8.2 on Windows 10](https://youtu.be/UvcQlPZ8ecA)
 
-\-------------------------------------------------------------------------
-
+---------------------------------------
 ## GIT and Django
 
 Create a folder named SentilyZer on the Desktop (or wherever you wish)
@@ -26,8 +25,7 @@ Open terminal and run command `pip install django` or
 
 `pip install django --upgrade`
 
-\---------------------------------------------------------------------------
-
+---------------------------------------
 ## Twint
 
 Now to install the Twint, web scraping tool for Twitter, run the command
@@ -38,8 +36,7 @@ pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@orig
 
 To know more about twint: <https://github.com/twintproject/twint>
 
-\---------------------------------------------------------------------------
-
+---------------------------------------
 ## Python libraries and Extensions
 
 On VS Code install the python extension by Microsoft if not preinstalled
@@ -64,14 +61,15 @@ For windows run,
 
 `python -m pip install matplotlib`
 
+`pip install textblob`
+
 `pip install plotly`
 
 `pip install pandas`
 
 `pip install kaleido`
 
-\---------------------------------------------------------------------------
-
+---------------------------------------
 ## MySQL
 
 Install the MySQL server and the MySQL workbench from [MySQL Downloads](https://www.mysql.com/downloads/)
@@ -113,8 +111,7 @@ Now on the VS Code terminal run,
 `python manage.py migrate`
 
 
-\---------------------------------------------------------------------------
-
+---------------------------------------
 ### Looks like you are all set
 
 To run the server - 
