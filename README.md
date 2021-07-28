@@ -32,7 +32,7 @@ Now to install the Twint, web scraping tool for Twitter, run the command
 
 ![](Aspose.Words.83d7c7ae-9f22-4dc1-8287-39b8df4b74c1.001.png)
 
-pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+`pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint`
 
 To know more about twint: <https://github.com/twintproject/twint>
 
