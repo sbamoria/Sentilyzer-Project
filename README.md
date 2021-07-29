@@ -17,9 +17,9 @@ Create a folder named SentilyZer on the Desktop (or wherever you wish)
 
 Navigate to that folder in the command prompt
 
-Run command `git install URL`
+Run command `git clone <URL>`
 
-Inside the folder, ‘SentilyZer’ go to the folder named ‘hello’ and open it with VS code. 
+Open the folder with VS Code 
 
 Open terminal and run command `pip install django` or
 
@@ -39,7 +39,7 @@ To know more about twint: <https://github.com/twintproject/twint>
 
 On VS Code install the python extension by Microsoft if not preinstalled
 
-Make sure you have the python interpreter install as well.
+Make sure you have the python interpreter installed as well.
 
 From within VS Code, select a Python3 interpreter by opening the Command Palette (Ctrl + Shift +P), start typing the Python: Select interpreter command to search, then select the command. You can also select the Python Environment option on the Status bar if available (it may already show a selected interpreter too)
 
@@ -94,7 +94,7 @@ Open My SQL command-line client
 
 Enter the root password
 
-Now to Create a database named sentilyzer run the command,
+Now to Create a database named sentiment run the command,
 
 `CREATE DATABASE Sentiment;`
 
@@ -102,7 +102,7 @@ To check if the database was created or not,
 
 `SHOW DATABASES;`
 
-If the database was successfully created you would see the name sentilyzer in the list of databases
+If the database was successfully created you would see the name sentiment in the list of databases
 
 Now on the VS Code terminal run,
 
